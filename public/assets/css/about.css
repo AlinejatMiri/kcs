@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+
+:root {
+  /* ===== Core Backgrounds ===== */
+  --bg-primary: #0b0f14; /* Main body background */
+  --bg-secondary: #141a22; /* Header, navbar, sections */
+  --bg-tertiary: #1b2330; /* Cards, panels */
+
+  /* ===== Brand & Accent ===== */
+  --brand-primary: #e3a21a; /* Logo gold */
+  --brand-hover: #f0b63a; /* Lighter gold */
+  --brand-active: #c88b12; /* Pressed gold */
+
+  /* ===== Call To Action ===== */
+  --cta-primary: #ff8c1a; /* Buttons */
+  --cta-hover: #ffa84d; /* Hover state */
+  --cta-active: #e67600; /* Active / pressed */
+
+  /* ===== Text Colors ===== */
+  --text-primary: #e5e7eb; /* Main text */
+  --text-secondary: #9ca3af; /* Muted text */
+  --text-inverse: #0b0f14; /* Text on light/gold buttons */
+
+  /* ===== Borders & Lines ===== */
+  --border-default: #2a3443;
+  --border-hover: #3a4a63;
+
+  /* ===== Effects ===== */
+  --glow-brand: 0 0 12px rgba(227, 162, 26, 0.55);
+  --glow-cta: 0 0 12px rgba(255, 140, 26, 0.55);
+}
+
+
+.about-us {
+  width: 100%;
+  min-height: 80vh;
+  padding: 30px 20px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: "Poppins", sans-serif;
+}
+
+.about-us .about-text {
+  width: 100%;
+  height: 100px;
+  padding: 1.5rem;
+  margin: 20px 0px;
+}
+
+.about-text h3 {
+  font-size: clamp(1.5rem, 8vw, 2.5rem);
+  text-align: center;
+}
+
+.about-us .about-container {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 10%;
+}
+
+.about-container .about-info{
+  width: 40%;
+  height: auto;
+  padding: 10px;
+}
+
+.about-info h4{
+  font-size: clamp(1.2rem,2vw,1.7rem);
+  margin-bottom: 10px;
+}
+
+.about-info p{
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.7;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.about-info a{
+  padding: 5px 10px;
+  text-decoration: none;
+  color: var(--text-inverse);
+  background-color: var(--cta-active);
+  border: transparent;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+
+.about-info a:hover{
+  box-shadow: var(--glow-cta);
+}
+
+
+.about-container .logo-social{
+  width: 40%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo-social .social-media{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-media h4{
+  font-size: clamp(1.2rem,2vw,1.7rem);
+  margin-bottom: 10px;
+}
+
+.logo-social a{
+  text-decoration: none;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.social-media i{
+  color: red;
+  font-size: 1.5rem;
+}
+
+.logo-social .you-tube{
+  width: 500px;
+  height: 281px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+@media (max-width: 1024px) {
+  .about-us {
+    padding: 20px 15px;
+  }
+
+  .about-container {
+    gap: 5%;
+  }
+
+  .about-container .about-info,
+  .about-container .logo-social {
+    width: 48%;
+  }
+
+  .logo-social .you-tube {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .about-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .about-container .about-info,
+  .about-container .logo-social {
+    width: 100%;
+  }
+
+  .about-info p {
+    padding: 0;
+  }
+
+  .about-info a {
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  .logo-social {
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-media {
+    align-items: center;
+  }
+
+  .logo-social .you-tube {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .about-text {
+    padding: 1rem 0.5rem;
+  }
+
+  .about-info h4,
+  .social-media h4 {
+    font-size: 1.3rem;
+  }
+
+  .about-info p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .about-info a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .social-media i {
+    font-size: 1.3rem;
+  }
+}

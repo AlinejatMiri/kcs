@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* ================= ROOT VARIABLES ================= */
+:root {
+  --bg-primary: #0b0f14;
+  --bg-secondary: #141a22;
+  --bg-tertiary: #1b2330;
+
+  --brand-primary: #e3a21a;
+  --brand-hover: #f0b63a;
+  --brand-active: #c88b12;
+
+  --cta-primary: #ff8c1a;
+  --cta-hover: #ffa84d;
+  --cta-active: #e67600;
+
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --text-inverse: #0b0f14;
+
+  --border-default: #2a3443;
+  --border-hover: #3a4a63;
+
+  --glow-brand: 0 0 12px rgba(227, 162, 26, 0.55);
+  --glow-cta: 0 0 12px rgba(255, 140, 26, 0.55);
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+  background: var(--bg-primary);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= MAIN CONTAINER ================= */
+.container {
+  width: 80%;
+  min-height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background: var(--bg-secondary);
+  box-shadow: 0 0 15px var(--border-default);
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 4rem auto;
+  transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 0 15px var(--border-hover);
+}
+
+/* ================= LEFT PANEL ================= */
+.login-info {
+  width: 40%;
+  background: var(--brand-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.login-info h1 {
+  color: var(--text-inverse);
+  font-size: clamp(2rem, 4vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.login-info p {
+  color: var(--text-inverse);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.login-info a {
+  text-decoration: none;
+  color: var(--text-primary);
+  background: var(--cta-active);
+  padding: 8px 20px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+
+.login-info a:hover {
+  background: var(--cta-hover);
+}
+
+/* ================= RIGHT PANEL ================= */
+.login-form {
+  width: 60%;
+  background: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.login-form .form-control {
+  width: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.form-control label {
+  display: block;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.form-control .input {
+  width: 100%;
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: none;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.form-control .input:focus {
+  outline: 2px solid var(--cta-primary);
+}
+
+.form-control .submit-btn {
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  background: var(--cta-primary);
+  color: var(--text-inverse);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-control .submit-btn:hover {
+  background: var(--cta-hover);
+}
+
+/* ================= TABLET RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .container {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .login-info,
+  .login-form {
+    width: 100%;
+  }
+
+  .login-form .form-control {
+    width: 70%;
+  }
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 576px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .login-info h1 {
+    font-size: 2rem;
+  }
+
+  .login-info p {
+    font-size: 0.9rem;
+  }
+
+  .login-form .form-control {
+    width: 90%;
+  }
+
+  .form-control .submit-btn {
+    width: 100%;
+  }
+}
